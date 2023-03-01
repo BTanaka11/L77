@@ -1,5 +1,6 @@
-# L77
-This was a 4 person team project to create the frontend website for a fictional online clothing store, with an existing external API providing the data. I (Ben Tanaka) was responsible for the **Ratings & Reviews_** section. My code is in the */client/src/components/ratings-reviews/* directory and the *L77/client/src/index.jsx* file.
+<img src="https://user-images.githubusercontent.com/37204126/222028327-4b0748b9-0af4-4c7e-980d-08f7c79ce2c1.png" width="100px"/>
+
+This was a 4 person team project to create the frontend website for a fictional online clothing store, with an existing external API providing the data. I (Ben Tanaka) was responsible for the **_Ratings & Reviews_** section. My code is in the */client/src/components/ratings-reviews/* directory and the *L77/client/src/index.jsx* file. For a more detailed README describing the other sections, see the parent repo this was cloned from.
 
 ## Contributors
   * Ben Tanaka
@@ -20,18 +21,26 @@ This was a 4 person team project to create the frontend website for a fictional 
 
 ## How to Run
 1. npm install
-2. Create 2 files in the root directory
-  * A .env file with a single variable, "PORT" equal to a port of your choice on your local machine. EX: PORT=3000
-  * A MyConfig.js file containing:
-  ```javascript
-module.exports = {
-   TOKEN: 'x',
-   URL: 'http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc',
-   CLOUDINARY_API_KEY: 'x',
-   CLOUDINARY_API_SECRET: 'x',
-   CLOUDINARY_CLOUD_NAME: 'x',
-   PRESET: 'ml_default'
-};
-```
-      for TOKEN, use your GitHub Personal Access Token. If you don't have one, create one here: [I'm an inline-style link](https://github.com/settings/tokens).
-      for CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET, and CLOUDINARY_CLOUD_NAME, they aren't necessary unless you want to try the photo upload feature for submitting new reviews. If you don't want to try this, leave them as 'x'. If you do want to try this, signup for a Cloudinary account [here](https://cloudinary.com/users/register_free#gsc.tab=0) and go to the Dashboard to find the 3 values. 
+2. Create 2 files in the root directory:
+   * *.env* containing:
+     ```
+     PORT=3000
+     ```
+     * Or a different **PORT** of your choice.
+   
+   * *MyConfig.js* containing:
+     ```javascript
+     module.exports = {
+        TOKEN: 'x',
+        URL: 'http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc',
+        CLOUDINARY_API_KEY: 'x',
+        CLOUDINARY_API_SECRET: 'x',
+        CLOUDINARY_CLOUD_NAME: 'x',
+        PRESET: 'ml_default'
+     };
+     ```
+     * For **TOKEN**, use your GitHub Personal Access Token. If you don't have one, create one [here](https://github.com/settings/tokens).
+     * For **CLOUDINARY_API_KEY**, **CLOUDINARY_API_SECRET**, and **CLOUDINARY_CLOUD_NAME** - they aren't necessary unless you want to try the photo upload feature for submitting new reviews. If you don't want to try this, leave them as 'x'. If you do want to try this, signup for a Cloudinary account [here](https://cloudinary.com/users/register_free#gsc.tab=0) and go to the Dashboard to find the 3 values.
+      
+3. npm run client-dev
+4. npm run server-dev
