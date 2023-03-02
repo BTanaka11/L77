@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/37204126/222028327-4b0748b9-0af4-4c7e-980d-08f7c79ce2c1.png" width="100px"/>
 
-This was a 4 person team project to create the frontend website for a fictional online clothing store, with an existing external API providing the data. I (Ben Tanaka) was responsible for the **_Ratings & Reviews_** section. My code is in the */client/src/components/ratings-reviews/* directory and the *L77/client/src/index.jsx* file. For a more detailed README describing the other sections, see the parent repo this was cloned from.
+This was a 4 person team project to create the frontend website for a fictional online clothing store, with an existing external API providing the data. I (Ben Tanaka) was responsible for the **_Ratings & Reviews_** section. My code is in the */client/src/components/ratings-reviews/* directory and the *L77/client/src/index.jsx* file. For a more detailed README describing the other sections, see repo this was forked from.
 
 ## Contributors
   * Ben Tanaka
