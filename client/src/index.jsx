@@ -39,34 +39,34 @@ const theme = {
   bg: "white"
 }
 
-const postInteractionsAPI = (data) => {
-  const controller = new AbortController();
+// const postInteractionsAPI = (data) => {
+//   const controller = new AbortController();
 
-  axios({
-    url: `${URL}/interactions` ,
-    method: 'post',
-    headers: {authorization: TOKEN},
-    data: data,
-    signal: controller.signal
-  })
-  .then(res=>{console.log('interactions API posted:', data)})
-  .catch(err=>console.log('failed to post userclick to Interactions API'));
-  controller.abort()
-}
+//   axios({
+//     url: `${URL}/interactions` ,
+//     method: 'post',
+//     headers: {authorization: TOKEN},
+//     data: data,
+//     signal: controller.signal
+//   })
+//   .then(res=>{console.log('interactions API posted:', data)})
+//   .catch(err=>console.log('failed to post userclick to Interactions API'));
+//   controller.abort()
+// }
 
-window.onclick = (e) => {
-  for (let i = 0; i < e.path.length; i ++) {
-    let widget = widgetsIDs[e.path[i].id]
-    if (widget!= undefined) {
-      postInteractionsAPI({
-        element: e.target.outerHTML.replace(e.target.innerHTML, ''),
-        widget: widget,
-        time: new Date().toJSON()
-      });
-      break;
-    }
-  }
-}
+// window.onclick = (e) => {
+//   for (let i = 0; i < e.path.length; i ++) {
+//     let widget = widgetsIDs[e.path[i].id]
+//     if (widget!= undefined) {
+//       postInteractionsAPI({
+//         element: e.target.outerHTML.replace(e.target.innerHTML, ''),
+//         widget: widget,
+//         time: new Date().toJSON()
+//       });
+//       break;
+//     }
+//   }
+// }
 
 const App = () => {
   return (

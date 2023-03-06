@@ -3,8 +3,9 @@ const express = require('express');
 const path = require("path");
 
 const app = express();
+const PORT = '3000';
 
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
-app.listen(process.env.PORT);
-console.log(`Listening at http://localhost:${process.env.PORT}`);
+app.listen(PORT);
+console.log(`Listening at http://localhost:${PORT}`);
