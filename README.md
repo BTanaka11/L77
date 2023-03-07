@@ -19,6 +19,11 @@ This was a 4 person team project to create the frontend website for a fictional 
 ###### New Review Form
 - Allows customers to submit new reviews and contains form validation requiring certain fields to be entered and review body to be at least 50 characters. Customers may attach up to 5 photos, which go through a Cloudinary API to store on the cloud and generate a URL, which then gets saved in a separate backend service which services all other data needs.
 
+## Extra Feature - Click Tracking
+<img src="https://user-images.githubusercontent.com/37204126/223297320-2e7ff5cf-178c-4df8-b53d-9267601306a8.mp4"/>
+
+###### Whenever a user clicks anywhere on the page, the html element and which of the 4 sections/widgets it belongs to is posted to the external API.
+
 ## How to Run
 1. npm install
 2. Create 2 files in the root directory:
