@@ -1,7 +1,7 @@
 import {useState, useEffect, Fragment, useRef} from 'react';
 import axios from 'axios';
 
-import {TOKEN} from '/MyConfig.js';
+// import {TOKEN} from '/MyConfig.js';
 import {Breakdown} from './breakdown.jsx';
 import {ReviewsList} from './reviewsList.jsx'
 import styled from "styled-components";
@@ -39,7 +39,7 @@ const RatingsReviews = () => {
       axios({
         url: `http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews/meta/?product_id=${curProduct.id}`,
         method: 'get',
-        headers: {authorization: TOKEN}
+        headers: {authorization: process.env.TOKEN}
         })
         .then((val)=> {
           val.data.recommended.false = val.data.recommended.false || 0;

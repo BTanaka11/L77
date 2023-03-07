@@ -9,7 +9,7 @@ import QA from "./components/Q&A/QA.jsx";
 import RelatedItems from './components/RelatedItems/RelatedItems.jsx';
 import RatingsReviews from './components/ratings-reviews/ratings-reviews.jsx';
 import {BGBubbles} from './components/Shapes/Shapes.jsx';
-import {URL, TOKEN} from '/MyConfig.js';
+// import {URL, TOKEN} from '/MyConfig.js';
 import axios from 'axios';
 
 const Sdiv = styled.div`
@@ -85,5 +85,7 @@ const App = () => {
     </FullDiv>
   )
 }
-
-ReactDOM.render(<App />, document.getElementById('root'));
+const App2 = () => (
+  <div>{process.env.AMP_TOKE}</div>
+)
+ReactDOM.render(<App2 />, document.getElementById('root'));

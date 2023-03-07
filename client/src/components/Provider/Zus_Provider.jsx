@@ -1,12 +1,12 @@
 import create from 'zustand';
 import axios from 'axios';
 
-import {URL, TOKEN} from '/MyConfig.js';
+// import {URL, TOKEN} from '/MyConfig.js';
 
 const GetRequest = (req) => {
   return axios.get(req, {
-    baseURL: URL,
-    headers: {'Authorization': TOKEN}
+    baseURL: process.env.URL,
+    headers: {'Authorization': process.env.TOKEN}
   });
 }
 

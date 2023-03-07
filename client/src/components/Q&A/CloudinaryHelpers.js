@@ -1,5 +1,5 @@
 import { Cloudinary as CoreCloudinary, Util } from 'cloudinary-core';
-import { TOKEN, CLOUDINARY_CLOUD_NAME} from "/MyConfig.js";
+// import { TOKEN, CLOUDINARY_CLOUD_NAME} from "/MyConfig.js";
 
 export const url = (publicId, options) => {
   const scOptions = Util.withSnakeCaseKeys(options);
@@ -14,7 +14,7 @@ export const openUploadWidget = (options, callback) => {
 
 export async function  fetchPhotos  (imageTag, setter)  {
   const options = {
-  cloudName: CLOUDINARY_CLOUD_NAME,
+  cloudName: process.env.CLOUDINARY_CLOUD_NAME,
   format: 'json',
   type: 'list',
   version: Math.ceil(new Date().getTime() / 1000),

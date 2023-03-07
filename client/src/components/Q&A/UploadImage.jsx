@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 import { CloudinaryContext } from "cloudinary-react";
 import { fetchPhotos, openUploadWidget } from './CloudinaryHelpers.js';
-import {CLOUDINARY_CLOUD_NAME, PRESET } from "/MyConfig.js";
+// import {CLOUDINARY_CLOUD_NAME, PRESET } from "/MyConfig.js";
 
 const Button = styled.button`
 border-width: thin;
@@ -21,9 +21,9 @@ const UploadImage = ({setPhotos}) => {
 
   const beginUpload = (tag) => {
     const uploadOptions = {
-      cloudName: CLOUDINARY_CLOUD_NAME,
+      cloudName: process.env.CLOUDINARY_CLOUD_NAME,
       tags: [tag, 'anImage'],
-      uploadPreset: PRESET
+      uploadPreset: process.env.PRESET
     };
     openUploadWidget(uploadOptions, (error, photos) => {
       if (!error) {

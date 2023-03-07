@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 import axios from 'axios';
-import { TOKEN, URL } from "/MyConfig.js";
+// import { TOKEN, URL } from "/MyConfig.js";
 import UploadImage from './UploadImage.jsx';
 
 const Modaldiv = styled.div`
@@ -109,8 +109,8 @@ const AddAnswer = ({ question, product }) => {
             e.preventDefault();
             axios({
               method: 'post',
-              url: `${URL}/qa/questions/${question.question_id}/answers`,
-              headers: { Authorization: TOKEN },
+              url: `${process.env.URL}/qa/questions/${question.question_id}/answers`,
+              headers: { Authorization: process.env.TOKEN },
               data: {
                 product_id: product.id,
                 body: body,

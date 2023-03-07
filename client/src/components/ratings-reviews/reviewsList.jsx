@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import styled from "styled-components";
 import axios from 'axios';
-import {TOKEN} from '/MyConfig.js';
+// import {TOKEN} from '/MyConfig.js';
 import {ReviewTile} from './reviewTile.jsx'
 
 const ReviewsListDiv = styled.div`
@@ -53,7 +53,7 @@ export const ReviewsList = function ({product_id, starBarFilters}) {
     axios({
       url: `http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews/?page=${1}&count=${100000}&sort=${selectedSort}&product_id=${product_id}`,
       method: 'get',
-      headers: {authorization: TOKEN}
+      headers: {authorization: process.env.TOKEN}
       })
       .then((val)=> {
         let filteredReviews = val.data.results.filter((review)=> {

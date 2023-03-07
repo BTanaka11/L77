@@ -5,8 +5,8 @@ import Star from '../../assets/YellowStar/emptyStar.png';
 import fullstar from '../../assets/YellowStar/yellowStar.png';
 import CryptoJS from 'crypto-js'
 import axios from 'axios';
-import {CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET, CLOUDINARY_CLOUD_NAME} from '/MyConfig.js';
-import {TOKEN} from '/MyConfig.js';
+// import {CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET, CLOUDINARY_CLOUD_NAME} from '/MyConfig.js';
+// import {TOKEN} from '/MyConfig.js';
 import cross from '../../assets/cross.png';
 
 const StyledModal = styled.div`
@@ -127,14 +127,14 @@ export const cloudinaryPostRequest = (arrayOfFiles, successPhotosCallback) => {
     Promise.all(arrayOfFiles.map((file)=>{
       const formData = new FormData();
       let timeStamp=Date.now();
-      let signature = CryptoJS.SHA1(`timestamp=${timeStamp}${CLOUDINARY_API_SECRET}`).toString(CryptoJS.enc.Hex);
+      let signature = CryptoJS.SHA1(`timestamp=${timeStamp}${process.env.CLOUDINARY_API_SECRET}`).toString(CryptoJS.enc.Hex);
 
       formData.append("file", file);
-      formData.append("api_key", CLOUDINARY_API_KEY);
+      formData.append("api_key", process.env.CLOUDINARY_API_KEY);
       formData.append("timestamp", timeStamp);
       formData.append("signature", signature);
       return axios({
-      url: `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/upload`,
+      url: `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/upload`,
         method: 'post',
         data: formData
       })
@@ -186,7 +186,7 @@ export const NewReviewForm = ({setmetaData, characteristics, product_id, product
     axios({
       method: 'post',
       url: `http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews`,
-      headers: {authorization: TOKEN},
+      headers: {authorization: process.env.TOKEN},
       data: dataz
     })
     .then((val)=> {

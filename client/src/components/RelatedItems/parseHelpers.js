@@ -1,9 +1,9 @@
 import axios from 'axios';
-import {TOKEN} from '/MyConfig.js';
+// import {TOKEN} from '/MyConfig.js';
 
 const options = {
   baseURL: 'http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/',
-  headers: {Authorization: TOKEN}
+  headers: {Authorization: process.env.TOKEN}
 }
 
 export const getRelatedProducts = productId => {

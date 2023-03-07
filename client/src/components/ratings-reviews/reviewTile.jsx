@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import styled from "styled-components";
 import {Starbar} from './starbar.jsx';
 import axios from 'axios';
-import {TOKEN} from '/MyConfig.js';
+// import {TOKEN} from '/MyConfig.js';
 import brokenIMG from '../../assets/brokenImage.png';
 
 const StyledContainerSpread = styled.div`
@@ -77,7 +77,7 @@ export const ReviewTile = ({review}) => {
       axios({
         url: `http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews/${review.review_id}/helpful`,
         method: 'put',
-        headers: {authorization: TOKEN}
+        headers: {authorization: process.env.TOKEN}
         })
         .then(()=> {
           setHelpful({voted:true, helpfulCount: review.helpfulness + 1})

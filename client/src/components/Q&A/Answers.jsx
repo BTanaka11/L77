@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import styled from "styled-components";
-import { TOKEN, URL } from "/MyConfig.js";
+// import { TOKEN, URL } from "/MyConfig.js";
 
 const SoftButton = styled.button`
   border: none;
@@ -61,8 +61,8 @@ const Answers = ({ question }) => {
   useEffect(() => {
     axios({
       method: 'get',
-      url: `${URL}/qa/questions/${question.question_id}/answers`,
-      headers: { Authorization: TOKEN }
+      url: `${process.env.URL}/qa/questions/${question.question_id}/answers`,
+      headers: { Authorization: process.env.TOKEN }
     })
       .then((res) => {
         let response = setSellersFirst(res.data.results);

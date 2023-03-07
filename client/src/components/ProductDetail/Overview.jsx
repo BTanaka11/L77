@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 import axios from 'axios';
 
-import {URL, TOKEN} from '/MyConfig.js';
+// import {URL, TOKEN} from '/MyConfig.js';
 import ProductInformation from "./ProductInformation.jsx";
 import StyleCart from "./StyleCart.jsx";
 // import Gallery from "./Gallery.jsx";
