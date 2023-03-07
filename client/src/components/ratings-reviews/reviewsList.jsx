@@ -51,7 +51,7 @@ export const ReviewsList = function ({product_id, starBarFilters}) {
   useEffect(()=> {
 
     axios({
-      url: `http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews/?page=${1}&count=${100000}&sort=${selectedSort}&product_id=${product_id}`,
+      url: `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews/?page=${1}&count=${100000}&sort=${selectedSort}&product_id=${product_id}`,
       method: 'get',
       headers: {authorization: process.env.TOKEN}
       })

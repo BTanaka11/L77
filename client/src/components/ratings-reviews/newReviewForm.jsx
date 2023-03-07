@@ -185,7 +185,7 @@ export const NewReviewForm = ({setmetaData, characteristics, product_id, product
     }
     axios({
       method: 'post',
-      url: `http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews`,
+      url: `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews`,
       headers: {authorization: process.env.TOKEN},
       data: dataz
     })

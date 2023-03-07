@@ -37,7 +37,7 @@ const RatingsReviews = () => {
   useEffect(()=> {
     if(isMounted.current) {
       axios({
-        url: `http://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews/meta/?product_id=${curProduct.id}`,
+        url: `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rfc/reviews/meta/?product_id=${curProduct.id}`,
         method: 'get',
         headers: {authorization: process.env.TOKEN}
         })
