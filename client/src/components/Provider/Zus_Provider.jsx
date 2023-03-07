@@ -17,8 +17,6 @@ const WeightedAvg = (obj) => {
     holder += key * obj[key];
     count += obj[key] * 1;
   }
-  //To see current Stars
-  // console.log('I AM NUM', (Math.round((holder/count) * 4) / 4))
   return {avg: (Math.round((holder/count) * 4) / 4), overall: count};
 }
 
@@ -51,7 +49,6 @@ const ProductStore2 = create((set, get) => ({
     GetRequest(`/products/${data.id}/styles`)
     .then(({data}) => {
       set(() => ({curProductStyles: data.results}));
-      console.log("🚀 ~ file: Zus_Provider.jsx ~ line 54 ~ .then ~ data", data)
       data.results.map((obj) => {
         if (obj["default?"] === true) {
           set(() => ({curStyle: obj}))
