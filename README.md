@@ -2,6 +2,8 @@
 
 This was a 4 person team project to create the frontend website for a fictional online clothing store, with an existing external API providing the data. I (Ben Tanaka) was responsible for the **_Ratings & Reviews_** section. My code is in the */client/src/components/ratings-reviews/* directory and the *L77/client/src/index.jsx* file. For a more detailed README describing the other sections, see repo this was forked from.
 
+<a href="https://amplify-deploy.d469pfy0cj7c4.amplifyapp.com/#/">Deployment</a>
+
 ## Contributors
   * Ben Tanaka
   * Bala Sathiya
