@@ -31,7 +31,6 @@ const Overview = () => {
 
   useEffect(() => {
     console.log(process.env.CLOUDINARY_CLOUD_NAME, process.env.URL, process.env.TOKEN, process.env.CLOUDINARY_API_KEY, process.env.CLOUDINARY_API_SECRET)
-    console.log('Running!');
     setup();
   }, [])
 
