@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import styled, {ThemeProvider} from "styled-components";
 
-require('dotenv').config();
+// require('dotenv').config();
 
 import GlobalFonts from './fonts/fonts.js';
 import Overview from './components/ProductDetail/Overview.jsx';
@@ -87,7 +87,7 @@ const App = () => {
     </FullDiv>
   )
 }
-const App2 = () => (
-  <div>{process.env.CLOUDINARY_CLOUD_NAME}</div>
-)
-ReactDOM.render(<App2 />, document.getElementById('root'));
+// const App2 = () => (
+//   <div>{process.env.CLOUDINARY_CLOUD_NAME}</div>
+// )
+ReactDOM.render(<App />, document.getElementById('root'));

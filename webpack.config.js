@@ -1,6 +1,6 @@
-require("dotenv").config();
+// require("dotenv").config();
 const webpack = require("webpack");
-
+const Dotenv = require('dotenv-webpack');
 const path = require("path");
 
 module.exports = {
@@ -34,6 +34,9 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new Dotenv()
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, "/client/dist/")
