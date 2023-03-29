@@ -9,9 +9,6 @@ import {useRelatedItemsStore} from './RelatedItemsStore.jsx';
 import ProductStore from '../Provider/Zus_Provider.jsx';
 import {H2} from '../ProductDetail/StyleCart.jsx';
 
-const Title = styled.h1`
-
-`;
 const Div = styled.div`
   display: flex;
   flex-direction: column;
