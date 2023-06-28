@@ -8,4 +8,4 @@ const PORT = '3000';
 app.use(express.static(path.join(__dirname, "../client/dist")));
 
 app.listen(PORT);
-console.log(`Listening at http://localhost:${PORT}`);
+console.log(`Listening at http://localhost:${PORT}`)
